@@ -31,17 +31,17 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 Happy coding!
 
 
-# Cupcakin' Around!
+# Python in Python
 
-For the deployed website, [Click here.](https://liamsmith3194.github.io/rock-paper-scissors/)
+For the deployed website, [Click here.](https://liamsmith3194.github.io/python-in-python/)
 
-Welcome to Rock, Paper, Scissors! Based on the popular hand game, usually played between two people, in which each player simultaneously form one of three shapes with a hand. Often used instead of a slip of a coin.
+Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen collecting the "food" and not hitting the walls or crossing through yourself.
 
-![Icons & Rules](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/icons-rules.PNG)
+![Icons & Rules](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/icons-rules.PNG)
 
 Responsively designed to display on a range of devices from desktops to mobiles.
 
-![Am I Responsive](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/am-i-responsive.PNG)
+![Am I Responsive](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/am-i-responsive.PNG)
 
 ## User Experience (UX)
 
@@ -66,15 +66,12 @@ The scoreboard uses win, draw, lose colours; green #3EA62D, black #000000, red #
 - #### Imagery
 - As mentioned above, the fun, striking, cartoon like images used for the hand gestures look great and work really nicely as the buttons with the grey circular borders.
 
-- ### Wireframes
+- ### Flowchart
 
-- Figma Desktop Wireframe - [View](https://www.figma.com/file/ciXYUYV361qot5MCN7Z5hF/Rock%2C-Paper%2C-Scissors---Desktop?node-id=0%3A1)
+- Lucidchart - [View](https://lucid.app/lucidchart/73191bed-4f56-4346-a1b2-0c396684c9c4/edit?invitationId=inv_35d8ac34-a4b0-41c5-a4f5-98f8ded0b418)
 
-![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/desktop-wireframe.PNG)
+![Lucid Snake Flowchart](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lucid-flowchart.PNG)
 
-- Figma Mobile Wireframe - [View](https://www.figma.com/file/EtSRFMgeaP0ACLVRtgNXmQ/Rock%2C-Paper%2C-Scissors---Mobile?node-id=0%3A1)
-
-![Figma Mobile Wireframe](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/mobile-wireframe.PNG)
 
 ## Features
 Below is a brief overview of the website and its main features.
@@ -87,28 +84,28 @@ Below is a brief overview of the website and its main features.
 
 - Removing the background behind the images has made the buttons look very professional, especially when hovered over with the white background filling in around the icon in a lighter shade of grey. The button also increases in size slightly, making it even more obvious for the user to know where the mouse is.
 
-![Buttons Hover Pseudo](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/interactive-buttons-hover.PNG)
+![Buttons Hover Pseudo](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/interactive-buttons-hover.PNG)
 
 ### 3-second countdown
 
 - Once the user has selected an answer by clicking one of the buttons, a 3-second timer appears in between the round number and scoreboard. The timer then disappears once the countdown is complete and the randomly generated computer answer is revealed along with the end result.
 
-![3-second countdown](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/countdown-timer.PNG)
+![3-second countdown](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/countdown-timer.PNG)
 
 
 ### Alert message to confirm round outcome
 
 - After the 1-second delay the alert message appears and summarises the round, for examples see below:
 
-![Won](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/alert-message-won.PNG)
+![Won](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/alert-message-won.PNG)
 
-![Drawn](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/alert-message-draw.PNG)
+![Drawn](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/alert-message-draw.PNG)
 
-![Lost](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/alert-message-lost.PNG)
+![Lost](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/alert-message-lost.PNG)
 
 ### Automatic updating scoreboard & round number
 
-![Scoreboard](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/scoreboard.PNG)
+![Scoreboard](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/scoreboard.PNG)
 
 ## Future Features
 
@@ -121,20 +118,16 @@ Below is a brief overview of the website and its main features.
 
 ### Created by using:
 
-- HTML5
-- CSS3
-- JavaScript
+- Python
 
 ### Programs including:
 
-- [Google Fonts:](https://fonts.google.com/)
-- Google fonts were used to import the 'Bebas Neue' into the style.css file.
 - [GitPod](https://gitpod.io/)
 - GitPod was used to create and update the website throughout via the terminal to push changes to GitHub.
 - [GitHub:](https://github.com/)
 - GitHub was used to embed the site and store all imagery.
-- [Figma:](https://figma.com/)
-- Figma was used to create the wireframes during the design process.
+- [Lucidchart:](www.lucidchart.com)
+- Lucidchart was used to create the step by step workflow to visualise the game.
 
 ## Testing
 
@@ -142,8 +135,8 @@ Below is a brief overview of the website and its main features.
 
 The W3C Markup Validator and W3C CSS Validator Services were used to ensure there were no syntax errors in the project.
 
-- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fliamsmith3194.github.io%2Frock-paper-scissors%2F)
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fliamsmith3194.github.io%2Frock-paper-scissors)
+- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fliamsmith3194.github.io%2Fpython-in-python%2F)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fliamsmith3194.github.io%2Fpython-in-python)
 - [Jshint JavaScript linter](https://jshint.com/) - 26 warnings, the mast majority:
     -   'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
     -   'template literal syntax' is only available in ES6 (use 'esversion: 6'.
@@ -154,14 +147,14 @@ Initial lighthouse scores produced a performance of 99 & 97 & accessibility of 1
 
 - Desktop Results
 
-![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/lighthouse-desktop.PNG)
+![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lighthouse-desktop.PNG)
 
 - Mobile Results
 
-![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/lighthouse-mobile.PNG)
+![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lighthouse-mobile.PNG)
 
 After changing the resolution and file type of the images, the Desktop score produced perfect 100's.
-![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/lighthouse-desktop-improved.PNG)
+![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lighthouse-desktop-improved.PNG)
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -201,30 +194,30 @@ Q4. As a first time visitor, I want to enjoy the game and come back again and ag
 
 ## Deployment
 
-### GitHub Pages
+### Heroku
 
 GitHub was the program used to deploy the site, it was accomplished by using the following steps:
 
 1. Log in to GitHub and select the GitHub Repository.
 
-![GitHub Repository](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/github-repo.PNG)
+![GitHub Repository](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/github-repo.PNG)
 
 2. At the top of the page towards the middle of the screen, you will see a "Settings" menu item with a cog icon.
 
-![GitHub Settings](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/github-settings.PNG)
+![GitHub Settings](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/github-settings.PNG)
 3. On the left-hand side is a vertical list, locate and click "Pages".
 
-![GitHub Pages](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/github-pages.PNG)
+![GitHub Pages](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/github-pages.PNG)
 
 4. Under the "Source" sub-heading, click on the dropdown by default "None" and choose "main".
 
-![GitHub Source](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/github-source.PNG)
+![GitHub Source](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/github-source.PNG)
 
 5. Click "Save"
 5. The page will automatically refresh.
 6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
 
-![GitHub Publish](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/github-published.PNG)
+![GitHub Publish](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/github-published.PNG)
 
 ## References
 
@@ -244,11 +237,15 @@ A further 1-second delay before the alert message informs the user of the round 
 
 ### Content
 
+#### Import
+-   pygame -  a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language. [(pygame.org)](https://www.pygame.org/wiki/about)
+
+
 - All content was written by the developer.
 
 ### Digital Artwork
 
-- The images used for the hand gestures were sourced from the World Rock Paper Scissors Association [(WRPSA)](https://wrpsa.com/the-official-rules-of-rock-paper-scissors)
+- The images used for the hand gestures were sourced from the World Rock Paper Scissors Association [(WRPSA)](https://wrpsa.com/the-official-rules-of-python-in-python)
 
 ### Mentions
 
