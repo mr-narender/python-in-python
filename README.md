@@ -47,26 +47,25 @@ Responsively designed to display on a range of devices from desktops to mobiles.
 
 ### First Time Visitor Goals
 
-1. As a first time visitor, I want a clear understanding of the interactive game on show.
-2. As a first time visitor, I want a brief description of the rules in order to win the game.
-3. As a first time visitor, I want to have live scoring, round by round.
+1. As a first time visitor, I want a clear understand of the objective of game.
+2. As a first time visitor, I want the controls to be as simple of possible.
+3. As a first time visitor, I want to have live scoring.
 4. As a first time visitor, I want to enjoy the game and come back again and again.
 
 ### Returning Visitor Goals
 
 1. As a returning visitor, I want to enjoy the game as much as I did the first time.
 
-- ### Design
+
+### Design
 
 - #### Colour Scheme
-- With the artistic images used for the hand gestures, the colour scheme is very clean, with the body coloured grey (#686868).
-The scoreboard uses win, draw, lose colours; green #3EA62D, black #000000, red #FF0000 just to add some contrast.
+- The snake board is set on a dark chequered background #202937 - RGB (38,52,69) #263445 - RGB (32,41,55).
 - #### Typography
-- One typeface is used throughout the site (Bebas Neue) which is clear to read and stands out enough to draw the user into the game. The game title has a 5px letter spacing and the remaining text has 2px letter spacing to increase readability. Finally, Bebas Neue has a fallback of sans-serif in case of any import issues.
-- #### Imagery
-- As mentioned above, the fun, striking, cartoon like images used for the hand gestures look great and work really nicely as the buttons with the grey circular borders.
+- One typeface is used to show the scoreboard (Monotype).
 
-- ### Flowchart
+
+### Flowchart
 
 - Lucidchart - [View](https://lucid.app/lucidchart/73191bed-4f56-4346-a1b2-0c396684c9c4/edit?invitationId=inv_35d8ac34-a4b0-41c5-a4f5-98f8ded0b418)
 
@@ -74,45 +73,23 @@ The scoreboard uses win, draw, lose colours; green #3EA62D, black #000000, red #
 
 
 ## Features
-Below is a brief overview of the website and its main features.
+Below is a brief overview of the game.
 
-### Fun animated images
+### Chequered background
 
-- The use of the images add to the aesthetics of the site and makes it much more appealing than just using text.
+- placeholder
 
-### Interactive buttons
+### Growing snake
 
-- Removing the background behind the images has made the buttons look very professional, especially when hovered over with the white background filling in around the icon in a lighter shade of grey. The button also increases in size slightly, making it even more obvious for the user to know where the mouse is.
+- placeholder
 
-![Buttons Hover Pseudo](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/interactive-buttons-hover.PNG)
+### Scoreboard
 
-### 3-second countdown
-
-- Once the user has selected an answer by clicking one of the buttons, a 3-second timer appears in between the round number and scoreboard. The timer then disappears once the countdown is complete and the randomly generated computer answer is revealed along with the end result.
-
-![3-second countdown](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/countdown-timer.PNG)
-
-
-### Alert message to confirm round outcome
-
-- After the 1-second delay the alert message appears and summarises the round, for examples see below:
-
-![Won](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/alert-message-won.PNG)
-
-![Drawn](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/alert-message-draw.PNG)
-
-![Lost](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/alert-message-lost.PNG)
-
-### Automatic updating scoreboard & round number
-
-![Scoreboard](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/scoreboard.PNG)
+- placeholder
 
 ## Future Features
 
-- User selects how many rounds to play, best of 5 etc.
-- The ability to choose a difficulty level. Easy, medium & hard.
-- Use the data from pervious rounds. For example, what does the user do after a draw? Does the user stick with the same button?
-- Display round outcome out of alert message. Modal boxes were attempted instead, but I wasn't able to make them work in the way I required.
+- placeholder
 
 ## Technologies
 
@@ -122,8 +99,10 @@ Below is a brief overview of the website and its main features.
 
 ### Programs including:
 
+- [Replit](https://replit.com/)
+- Replit was used instead of GitPod due to the functionality issue with the Pygame module. All coding and testing was created in Replit.
 - [GitPod](https://gitpod.io/)
-- GitPod was used to create and update the website throughout via the terminal to push changes to GitHub.
+- GitPod was used via the terminal to push changes to GitHub.
 - [GitHub:](https://github.com/)
 - GitHub was used to embed the site and store all imagery.
 - [Lucidchart:](www.lucidchart.com)
@@ -141,34 +120,19 @@ The W3C Markup Validator and W3C CSS Validator Services were used to ensure ther
     -   'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
     -   'template literal syntax' is only available in ES6 (use 'esversion: 6'.
 
-### Lighthouse Testing
-
-Initial lighthouse scores produced a performance of 99 & 97 & accessibility of 100 & 94. The reason given for the accessibility score on a mobile is "Background and foreground colors do not have a sufficient contrast ratio." This points to the win and lose colours used against the white background. As someone with a type of red-green colour-blindness (Protan), I have had no issues telling the colours apart or reading text.
-
-- Desktop Results
-
-![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lighthouse-desktop.PNG)
-
-- Mobile Results
-
-![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lighthouse-mobile.PNG)
-
-After changing the resolution and file type of the images, the Desktop score produced perfect 100's.
-![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lighthouse-desktop-improved.PNG)
-
 ### Testing User Stories from User Experience (UX) Section
 
 - #### First Time Visitor Goals
 
-Q1. As a first time visitor, I want a clear understanding of the interactive game on show.
+Q1. As a first time visitor, I want a clear understand of the objective of game.
 
 - A large majority of the world's population have played or understand how Rock, Paper Scissors is played. As soon as users enter the site, it is abundantly clear what the game is and how to play it. The default icons on show increase the clarity.
 
-Q2. As a first time visitor, I want a brief description of the rules in order to win the game.
+Q2. As a first time visitor, I want the controls to be as simple of possible.
 
 - The rules are very clear to see, labelled up beneath the interactive buttons. "ROCK BEATS SCISSORS" etc.
 
-Q3. As a first time visitor, I want to have live scoring round by round.
+Q3. As a first time visitor, I want to have live scoring.
 
 - Round by round after the alert message of the outcome, the round number is updated along with the tally of rounds won, rounds drawn or rounds lost, all looking from the user's perspective.
 
@@ -197,6 +161,8 @@ Q4. As a first time visitor, I want to enjoy the game and come back again and ag
 ### Heroku
 
 GitHub was the program used to deploy the site, it was accomplished by using the following steps:
+
+REPLACE !!!!
 
 1. Log in to GitHub and select the GitHub Repository.
 
