@@ -18,3 +18,14 @@ class Snake():
             return
         else:
             snake.direction = point
+
+    def move(snake):
+        current_position = snake.get_head_position()
+        x,y = snake.direction
+        new_position = (((current_position[0]+(x*gridsize))%screen_width), (current_position[1]+(y*gridsize))%screen_height)
+        if len(snake.positions) > 2 and new_position in snake.positions[2:]:
+            snake.reset()
+        else:
+            snake.positions.insert(0,new_position)
+            if len(snake.positions) > snake.length:
+                snake.positions.pop()
