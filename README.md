@@ -1,47 +1,10 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome liamsmith3194,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
-
-
 # Python in Python
 
 For the deployed website, [Click here.](https://liamsmith3194.github.io/python-in-python/)
 
 Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen collecting the "food" and not hitting the walls or crossing through yourself.
 
-![Icons & Rules](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/icons-rules.PNG)
-
-Responsively designed to display on a range of devices from desktops to mobiles.
-
-![Am I Responsive](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/am-i-responsive.PNG)
+Screenshot of game here.
 
 ## User Experience (UX)
 
@@ -62,7 +25,7 @@ Responsively designed to display on a range of devices from desktops to mobiles.
 - #### Colour Scheme
 - The snake board is set on a dark chequered background #202937 - RGB (38,52,69) #263445 - RGB (32,41,55).
 - #### Typography
-- One typeface is used to show the scoreboard (Monotype).
+- One typeface is used to show the scoreboard (Monotype). This is used as it brings an arcade like feel but is clear to read, especially when in white on the dark chequered background.
 
 
 ### Flowchart
@@ -107,6 +70,10 @@ Below is a brief overview of the game.
 - GitHub was used to embed the site and store all imagery.
 - [Lucidchart:](www.lucidchart.com)
 - Lucidchart was used to create the step by step workflow to visualise the game.
+
+_____________________
+ALL TO BE REPLACED BELOW
+
 
 ## Testing
 
@@ -189,6 +156,8 @@ REPLACE !!!!
 
 ### Code
 
+REPLACE !!!!
+
 - Generating a random word (Rock, Paper or Scissors) from the console - Love Maths (Walkthrough Project).
 
 - Transition CSS - Animates the hover pseduo on the buttons - Love Maths (Walkthrough Project).
@@ -209,12 +178,45 @@ A further 1-second delay before the alert message informs the user of the round 
 
 - All content was written by the developer.
 
-### Digital Artwork
-
-- The images used for the hand gestures were sourced from the World Rock Paper Scissors Association [(WRPSA)](https://wrpsa.com/the-official-rules-of-python-in-python)
-
 ### Mentions
 
 - My Mentor for answering my questions throughout.
 
 - Slack users for constructive feedback, suggestions for improvements and video calls.
+
+
+________________________________
+
+
+
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
+Welcome liamsmith3194,
+
+This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+
+## Reminders
+
+* Your code must be placed in the `run.py` file
+* Your dependencies must be placed in the `requirements.txt` file
+* Do not edit any of the other files or your code may not deploy properly
+
+## Creating the Heroku app
+
+When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+
+1. `heroku/python`
+2. `heroku/nodejs`
+
+You must then create a _Config Var_ called `PORT`. Set this to `8000`
+
+If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+
+Connect your GitHub repository and deploy as normal.
+
+## Constraints
+
+The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+
+-----
+Happy coding!
