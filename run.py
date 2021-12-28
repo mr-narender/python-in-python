@@ -35,35 +35,45 @@ def snake_grid(surface):
         pygame.draw.rect(surface, (32,41,55), dark_square)
 
 class Snake():
-    def __init__(snake):
+  def __init__(snake):
       """
-      Game loads with the "snake" in a random postion and direction. Starting with one block.
+      Game loads with the "snake" moving from left to right in centre of the grid. Starting with one block.
       """
       snake.length = 1
       snake.position = [((screen_width / 2), (screen_height / 2))]
-      snake.direction = random.choice([up, down, left, right])
+      snake.direction = right
       snake.color = (48, 109, 223)
       snake.score = 0
-
-    def snake_direction(snake):
+  
+  def snake_direction(snake):
       """
       Front square denotes the head of the snake, 
       """
       return snake.position[0]
 
-    def turn(snake, point):
-        if snake.length > 1 and (point[0]*-1, point[1]*-1) == snake.direction:
+  def turn(snake, point):
+        if snake.length > 1 and (point[0] * -1,
+                                 point[1] * -1) == snake.direction:
             return
         else:
             snake.direction = point
 
-    def move(snake):
+  def move(snake):
         current_position = snake.snake_direction()
         x,y = snake.direction
         new_position = (((current_position[0]+(x*gridsize))%screen_width), (current_position[1]+(y*gridsize))%screen_height)
-        if len(snake.positions) > 2 and new_position in snake.positions[2:]:
-            snake.reset()
+        if len(snake.position) > 2 and new_position in snake.position[2:]:
+            snake.restart()
         else:
-            snake.positions.insert(0,new_position)
-            if len(snake.positions) > snake.length:
-                snake.positions.pop()
+            snake.position.insert(0,new_position)
+            if len(snake.position) > snake.length:
+                snake.position.pop()
+
+  def restart(snake):
+    """
+    When the snake hits itself the game restarts from the beginning with the snake back to one square and the score on zero
+    """
+    snake.length = 1
+    snake.position = [((screen_width/2), (screen_height/2))]
+    snake.direction = right
+    snake.score = 0
