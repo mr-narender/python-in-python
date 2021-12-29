@@ -39,8 +39,8 @@ class Snake():
       """
       Game loads with the "snake" moving from left to right in centre of the grid. Starting with one block.
       """
-      snake.length = 1
-      snake.position = [((screen_width / 2), (screen_height / 2))]
+      snake.size = 1
+      snake.position = ([((screen_width / 2), (screen_height / 2))])
       snake.direction = right
       snake.color = (48, 109, 223)
       snake.score = 0
@@ -52,7 +52,7 @@ class Snake():
       return snake.position[0]
 
   def turn(snake, point):
-        if snake.length > 1 and (point[0] * -1,
+        if snake.size > 1 and (point[0] * -1,
                                  point[1] * -1) == snake.direction:
             return
         else:
@@ -66,14 +66,49 @@ class Snake():
             snake.restart()
         else:
             snake.position.insert(0,new_position)
-            if len(snake.position) > snake.length:
+            if len(snake.position) > snake.size:
                 snake.position.pop()
 
   def restart(snake):
     """
     When the snake hits itself the game restarts from the beginning with the snake back to one square and the score on zero
     """
-    snake.length = 1
+    snake.size = 1
     snake.position = [((screen_width/2), (screen_height/2))]
     snake.direction = right
     snake.score = 0
+
+    
+
+  def draw(snake,surface):
+        for p in snake.position:
+            r = pygame.Rect((p[0], p[1]), (gridsize,gridsize))
+            pygame.draw.rect(surface, snake.color, r)
+            pygame.draw.rect(surface, (255, 255, 255), r, 1)
+
+
+
+
+class Apple():
+  def __init__(apple):
+
+      apple.position = (0,0)
+      apple.color = (200, 0, 0)
+      apple.random_position()
+
+  def random_position(apple):
+        apple.position = (random.randint(0, grid_width-1)*gridsize, random.randint(0, grid_height-1)*gridsize)
+
+  def draw(apple, surface):
+        r = pygame.Rect((apple.position[0], apple.position[1]), (gridsize, gridsize))
+        pygame.draw.rect(surface, apple.color, r)
+        pygame.draw.rect(surface, (255, 255, 255), r, 1)
+
+
+
+
+def main():
+  pygame.init()
+
+
+main()

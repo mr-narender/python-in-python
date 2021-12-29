@@ -156,24 +156,14 @@ REPLACE !!!!
 
 ### Code
 
-REPLACE !!!!
+-   Title in Pygame window. [Stack Overflow](https://stackoverflow.com/questions/40566585/how-to-change-the-name-of-a-pygame-window)
 
-- Generating a random word (Rock, Paper or Scissors) from the console - Love Maths (Walkthrough Project).
-
-- Transition CSS - Animates the hover pseduo on the buttons - Love Maths (Walkthrough Project).
-
-- Switch function - Suggested by my mentor to display else statements in a cleaner way.
-
-- Countdown function - On click of one of the three options, and a countdown timer appears underneath the round number.
-[Stack Overflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown)
-
-- Delay function - Used to display the computer's answer and works with the above countdown function.
-A further 1-second delay before the alert message informs the user of the round result. - [Stack Overflow](https://stackoverflow.com/questions/16873889/how-to-create-javascript-delay-function)
+-   Pygame.rect [pygame.org](https://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
 
 ### Content
 
 #### Import
--   pygame -  a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language. [(pygame.org)](https://www.pygame.org/wiki/about)
+-   pygame -  a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language. [pygame.org](https://www.pygame.org/wiki/about)
 
 
 - All content was written by the developer.
