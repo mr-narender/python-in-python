@@ -17,9 +17,18 @@ grid_height = screen_height/gridsize
 
 # Using a Y and X axis, keydown actions create the below movements.
 up = (0,-1)
+right = (1,0)
 down = (0,1)
 left = (-1,0)
-right = (1,0)
+
+# Colours
+lighter_square = (38,52,69)
+darker_square = (32,41,55)
+snake = (0, 159, 0)
+apple = (200, 0, 0)
+white = (255, 255, 255)
+
+snake_score = 0
 
 def snake_grid(surface):
   """
@@ -78,13 +87,12 @@ class Snake():
     snake.direction = right
     snake.score = 0
 
-    
-
   def draw(snake,surface):
         for p in snake.position:
             r = pygame.Rect((p[0], p[1]), (gridsize,gridsize))
             pygame.draw.rect(surface, snake.color, r)
             pygame.draw.rect(surface, (255, 255, 255), r, 1)
+
 
 
 
