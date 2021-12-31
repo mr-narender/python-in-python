@@ -158,12 +158,18 @@ REPLACE !!!!
 
 -   Title in Pygame window. [Stack Overflow](https://stackoverflow.com/questions/40566585/how-to-change-the-name-of-a-pygame-window)
 
+-   Chessboard grid [Stack Overflow](https://stackoverflow.com/questions/38083788/turn-grid-into-a-checkerboard-pattern-in-python)
+
 -   Pygame.rect [pygame.org](https://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
 
 ### Content
 
 #### Import
--   pygame -  a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language. [pygame.org](https://www.pygame.org/wiki/about)
+-   Pygame Module -  a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language. [pygame.org](https://www.pygame.org/wiki/about)
+
+-   Sys Module -   ajjkhbl
+
+-   Random Module - sdffds [w3schools](https://www.w3schools.com/python/module_random.asp)
 
 
 - All content was written by the developer.

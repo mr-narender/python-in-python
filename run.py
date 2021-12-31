@@ -5,118 +5,149 @@ import random
 # Title on game window
 pygame.display.set_caption('Python in Python')
 
-# Sets screen width
+# Screen dimensions
 screen_width = 400
 screen_height = 400
 
-# Sets grid size
-gridsize = 20
+# Grid dimensions
+grid_size = 20
 # Produces a 20 x 20 grid
-grid_width = screen_width/gridsize
-grid_height = screen_height/gridsize
+grid_width = 20
+grid_height = 20
 
 # Using a Y and X axis, keydown actions create the below movements.
-up = (0,-1)
-right = (1,0)
-down = (0,1)
-left = (-1,0)
+up = (0, -1)
+right = (1, 0)
+down = (0, 1)
+left = (-1, 0)
 
 # Colours
-lighter_square = (38,52,69)
-darker_square = (32,41,55)
-snake = (0, 159, 0)
-apple = (200, 0, 0)
+lighter_square = (38, 52, 69)
+darker_square = (32, 41, 55)
 white = (255, 255, 255)
 
+# Snake
+snake_position = (200, 200)
+snake_head_colour = (0, 159, 0)
+snake_body_colour = (0, 0, 159)
+snake_size = 1
 snake_score = 0
+snake_speed = 10
 
-def snake_grid(surface):
-  """
+# Apple
+apple_position = (200, 0)
+apple_colour = (200, 0, 0)
+
+
+def background(surface):
+    """
   Creates the chequered grid for the game based on if the grid number is disable by two or not. If it is apply the darker colour if not, apply the lighter colour.
   """
-  for y in range(0, int(grid_height)):
-    for x in range(0, int(grid_width)):
-      if (x+y)%2 == 0:
-          light_square = pygame.Rect((x*gridsize, y*gridsize), (gridsize,gridsize))
-          pygame.draw.rect(surface,(38,52,69), light_square)
-      else:
-        dark_square = pygame.Rect((x*gridsize, y*gridsize), (gridsize,gridsize))
-        pygame.draw.rect(surface, (32,41,55), dark_square)
+    for y in range(0, int(grid_height)):
+        for x in range(0, int(grid_width)):
+            if (x + y) % 2 == 0:
+                square_one = pygame.Rect((x * grid_size, y * grid_size),
+                                         (grid_size, grid_size))
+                pygame.draw.rect(surface, (lighter_square), square_one)
+            else:
+                square_two = pygame.Rect((x * grid_size, y * grid_size),
+                                         (grid_size, grid_size))
+                pygame.draw.rect(surface, (darker_square), square_two)
 
-class Snake():
-  def __init__(snake):
-      """
-      Game loads with the "snake" moving from left to right in centre of the grid. Starting with one block.
-      """
-      snake.size = 1
-      snake.position = ([((screen_width / 2), (screen_height / 2))])
-      snake.direction = right
-      snake.color = (48, 109, 223)
-      snake.score = 0
-  
-  def snake_direction(snake):
-      """
-      Front square denotes the head of the snake, 
-      """
-      return snake.position[0]
 
-  def turn(snake, point):
-        if snake.size > 1 and (point[0] * -1,
-                                 point[1] * -1) == snake.direction:
-            return
-        else:
-            snake.direction = point
-
-  def move(snake):
-        current_position = snake.snake_direction()
-        x,y = snake.direction
-        new_position = (((current_position[0]+(x*gridsize))%screen_width), (current_position[1]+(y*gridsize))%screen_height)
-        if len(snake.position) > 2 and new_position in snake.position[2:]:
-            snake.restart()
-        else:
-            snake.position.insert(0,new_position)
-            if len(snake.position) > snake.size:
-                snake.position.pop()
-
-  def restart(snake):
+def snake(surface):
     """
-    When the snake hits itself the game restarts from the beginning with the snake back to one square and the score on zero
+  Creates the snake using the pygame.rect, loads the snake in the given position via the variable snake_position and coloured in snake_colour. A further white square has been used for a border.
+  """
+    snake_square = pygame.Rect((snake_position[0], snake_position[1]),
+                               (grid_size, grid_size))
+    pygame.draw.rect(surface, snake_head_colour, snake_square)
+    pygame.draw.rect(surface, (white), snake_square, 1)
+
+
+def snake_direction(snake):
     """
-    snake.size = 1
-    snake.position = [((screen_width/2), (screen_height/2))]
-    snake.direction = right
-    snake.score = 0
-
-  def draw(snake,surface):
-        for p in snake.position:
-            r = pygame.Rect((p[0], p[1]), (gridsize,gridsize))
-            pygame.draw.rect(surface, snake.color, r)
-            pygame.draw.rect(surface, (255, 255, 255), r, 1)
+  Front square denotes the head of the snake,
+  """
+    return snake.head[0]
 
 
-
+def random_position(apple):
+    """
+  Randomise the position of the apple on the game load.
+  """
+    apple.position = (random.randint(0, grid_width - 1) * grid_size,
+                      random.randint(0, grid_height - 1) * grid_size)
 
 
 class Apple():
-  def __init__(apple):
+    def __init__(apple):
 
-      apple.position = (0,0)
-      apple.color = (200, 0, 0)
-      apple.random_position()
+        apple.position = (0, 0)
+        apple.color = (200, 0, 0)
+        apple.random_position()
 
-  def random_position(apple):
-        apple.position = (random.randint(0, grid_width-1)*gridsize, random.randint(0, grid_height-1)*gridsize)
+    def random_position(apple):
+        apple.position = (random.randint(0, grid_width - 1) * grid_size,
+                          random.randint(0, grid_height - 1) * grid_size)
 
-  def draw(apple, surface):
-        r = pygame.Rect((apple.position[0], apple.position[1]), (gridsize, gridsize))
-        pygame.draw.rect(surface, apple.color, r)
-        pygame.draw.rect(surface, (255, 255, 255), r, 1)
+    def create_apple(apple, surface):
+      """
+      Creates the apple using the pygame.rect, loads the apple in the given position via the variable apple_position and coloured in apple_colour. A further white square has been used for a border.
+      """
+      apple_square = pygame.Rect((apple.position[0], apple.position[1]),
+                                   (grid_size, grid_size))
+      pygame.draw.rect(surface, apple.color, apple_square)
+      pygame.draw.rect(surface, (white), apple_square, 1)
 
 
+# def create_apple(apple, surface):
+#     """
+#   Creates the apple using the pygame.rect, loads the apple in the given position via the variable apple_position and coloured in apple_colour. A further white square has been used for a border.
+#   """
+#     apple_square = pygame.Rect((apple.position[0], apple.position[1]),
+#                                (grid_size, grid_size))
+#     pygame.draw.rect(surface, apple_colour, apple_square)
+#     pygame.draw.rect(surface, (white), apple_square, 1)
+
+
+def press_keyboard(snake):
+    """
+  Event listener to move the snake based on which direction key is pressed 
+  """
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP:
+                snake.turn(up)
+            elif event.key == pygame.K_DOWN:
+                snake.turn(down)
+            elif event.key == pygame.K_LEFT:
+                snake.turn(left)
+            elif event.key == pygame.K_RIGHT:
+                snake.turn(right)
 
 
 def main():
-  pygame.init()
+    pygame.init()
+    screen = pygame.display.set_mode((screen_width, screen_height))
+    surface = pygame.Surface(screen.get_size())
+    background(surface)
+    snake(surface)
+    apple = Apple()
+    apple.create_apple(surface)
+
+    font_score = pygame.font.SysFont("Courier", 16)
+    text = font_score.render("Score {0}".format(snake_score), 1, (white))
+
+    screen.blit(surface, (0, 0))
+    screen.blit(text, (5, 10))
+    pygame.display.update()
+
+    # while (True):
+    #   apple.random_position()
 
 
 main()
