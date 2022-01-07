@@ -162,6 +162,8 @@ REPLACE !!!!
 
 -   Pygame.rect [pygame.org](https://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
 
+-   Blit - Show score on grid [Stack Overflow](https://stackoverflow.com/questions/19733226/python-pygame-how-to-make-my-score-text-update-itself-forever)
+
 ### Content
 
 #### Import

@@ -55,14 +55,7 @@ def background(game_board):
  
 def snake(game_board):
         pygame.draw.rect(game_board, snake_colour, [200, 200, 20, 20])
-        pygame.draw.rect(game_board, white, [200, 200, 20, 20],1)
-
-def snake_score(score):
-    """
-  Creates the scoreboard in the top left corner of the window.
-  """
-    value = score_font.render("Score: " + str(score), True, white)
-    game_board.blit(value, [5, 10])
+        pygame.draw.rect(game_board, white, [200, 200, 20, 20], 1)
 
 def message(msg, color):
     """
@@ -73,26 +66,25 @@ def message(msg, color):
 
 def gameLoop():
     """
-  Game loop based on the game_over and game_end variables inside while loops.
+  Game loop based on the game_over and game_end variables inside while and if loops.
   """
     game_over = False
     game_end = False
  
     snake_x = screen_width / 2
     snake_y = screen_height / 2
- 
+    snake_score = 0
     move_horizontal = 0
     move_vertical = 0
 
     apple_x = round(random.randrange(0, screen_width - snake_size) / grid_size) * grid_size
     apple_y = round(random.randrange(0, screen_height - snake_size) / grid_size) * grid_size
 
- 
     while not game_over:
         while game_end == True:
             game_board.fill(black)
             message("You lost!\n Press Enter to Play Again\n Press Q to Quit", white)
-            snake_score(snake_size - 1)
+
             pygame.display.update()
   
             for event in pygame.event.get():
@@ -125,17 +117,26 @@ def gameLoop():
  
         snake_x += move_horizontal
         snake_y += move_vertical
+        snake_score = 0
         background(game_board)
+        font_score = pygame.font.SysFont("Courier", 16)
+        scoreboard = font_score.render("Score "+str(snake_score), 1, (white))
+        game_board.blit(scoreboard, (5, 10))
+
+        
 
         pygame.draw.rect(game_board, apple_colour, [apple_x, apple_y, 20, 20])
         pygame.draw.rect(game_board, white, [apple_x, apple_y, 20, 20],1)
         
         pygame.draw.rect(game_board, snake_colour, [snake_x, snake_y, 20, 20])
-        pygame.draw.rect(game_board, white, [snake_x, snake_y, 20, 20],1)
+        pygame.draw.rect(game_board, white, [snake_x, snake_y, 20, 20], 1)
         pygame.display.update()
  
         if snake_x == apple_x and snake_y == apple_y:
             print("Snake ate the apple")
+            snake_score += 1
+            apple_x = round(random.randrange(0, screen_width - snake_size) / grid_size) * grid_size
+            apple_y = round(random.randrange(0, screen_height - snake_size) / grid_size) * grid_size
 
         clock.tick(snake_speed)
  
