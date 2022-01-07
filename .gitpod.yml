@@ -11,3 +11,8 @@ vscode:
     - eventyret.bootstrap-4-cdn-snippet
     - hookyqr.beautify
     - matt-rudge.auto-open-preview-panel
+ports:
+  - port: 5900
+    onOpen: ignore
+  - port: 6080
+    onOpen: open-preview
