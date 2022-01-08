@@ -27,16 +27,23 @@ grid_height = 20
 # Snake
 snake_position = (0, 0)
 snake_colour = (0, 159, 0)
-snake_size = 1
+snake_x = screen_width / 2
+snake_y = screen_height / 2
+snake_size = 20
 snake_score = 0
 snake_speed = 10
 
 # Apple
 apple_position = (0, 0)
 apple_colour = (200, 0, 0)
+apple_x = round(random.randrange(0, screen_width - snake_size) / grid_size) * grid_size
+apple_y = round(random.randrange(0, screen_height - snake_size) / grid_size) * grid_size
  
-game_over_font = pygame.font.SysFont("helvetica", 12)
+game_quit_font = pygame.font.SysFont("helvetica", 12)
 score_font = pygame.font.SysFont("Courier", 16)
+
+game_quit = False
+game_over = False
 
 def background(game_board):
     """
@@ -52,24 +59,75 @@ def background(game_board):
                 square_two = pygame.Rect((x * grid_size, y * grid_size),
                                          (grid_size, grid_size))
                 pygame.draw.rect(game_board, (darker_square), square_two)
+
+def show_score():
+    font_score = pygame.font.SysFont("Courier", 16)
+    scoreboard = font_score.render("Score: "+str(snake_score), True, (white))
+    game_board.blit(scoreboard, (5, 10))
  
 def snake(game_board):
         pygame.draw.rect(game_board, snake_colour, [200, 200, 20, 20])
         pygame.draw.rect(game_board, white, [200, 200, 20, 20], 1)
 
+def apple(game_board):
+        pygame.draw.rect(game_board, apple_colour, [apple_x, apple_y, 20, 20])
+        pygame.draw.rect(game_board, white, [apple_x, apple_y, 20, 20],1)
+
+
+def apple_eaten(snake_x, apple_x, snake_y, apple_y, snake_score, snake_size):
+    if snake_x == apple_x and snake_y == apple_y:
+        snake_score += 10
+        snake_size += 20
+        print("Snake ate the apple") 
+        apple_x = round(random.randrange(0, screen_width - grid_size) / grid_size) * grid_size
+        apple_y = round(random.randrange(0, screen_height - grid_size) / grid_size) * grid_size
+    
+    return snake_x, apple_x, snake_y, apple_y, snake_score, snake_size
+
+
+
+
 def message(msg, color):
     """
   Creates the message after the snake has crashed into the wall or into it's self.
   """
-    mesg = game_over_font.render(msg, True, white)
+    mesg = game_quit_font.render(msg, True, white)
     game_board.blit(mesg, [screen_width/2, screen_height/2]) 
 
-def gameLoop():
+def keyboard_commands(move_horizontal, move_vertical):
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            game_quit = True
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                move_horizontal = -20
+                move_vertical = 0
+            elif event.key == pygame.K_RIGHT:
+                move_horizontal = 20
+                move_vertical = 0
+            elif event.key == pygame.K_UP:
+                move_vertical = -20
+                move_horizontal = 0
+            elif event.key == pygame.K_DOWN:
+                move_vertical = 20
+                move_horizontal = 0
+    return move_horizontal, move_vertical
+
+
+
+
+
+def game_loop():
     """
-  Game loop based on the game_over and game_end variables inside while and if loops.
+  Game loop based on the game_quit and game_over variables inside while and if loops.
   """
-    game_over = False
-    game_end = False
+    global game_over
+    global game_quit
+    global snake_score
+    global snake_size
+    global apple_x
+    global apple_y
+
  
     snake_x = screen_width / 2
     snake_y = screen_height / 2
@@ -77,71 +135,50 @@ def gameLoop():
     move_horizontal = 0
     move_vertical = 0
 
-    apple_x = round(random.randrange(0, screen_width - snake_size) / grid_size) * grid_size
-    apple_y = round(random.randrange(0, screen_height - snake_size) / grid_size) * grid_size
 
-    while not game_over:
-        while game_end == True:
+
+    while game_quit == False:
+        move_horizontal, move_vertical = keyboard_commands(move_horizontal, move_vertical)
+ 
+        snake_x += move_horizontal
+        snake_y += move_vertical
+        background(game_board)
+        scoreboard = show_score()
+
+        apple(game_board)
+        
+        pygame.draw.rect(game_board, snake_colour, [snake_x, snake_y, 20, 20])
+        pygame.draw.rect(game_board, white, [snake_x, snake_y, 20, 20], 1)
+        
+        pygame.display.update()
+ 
+        snake_x, apple_x, snake_y, apple_y, snake_score, snake_size = apple_eaten(snake_x, apple_x, snake_y, apple_y, snake_score, snake_size)
+        clock.tick(snake_speed)
+
+        if snake_x >= screen_width or snake_x < 0 or snake_y >= screen_height or snake_y < 0:
+          game_over = True
+
+        while game_over == True:
             game_board.fill(black)
             message("You lost!\n Press Enter to Play Again\n Press Q to Quit", white)
+            show_score()
 
-            pygame.display.update()
+            
   
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_q:
-                        game_over = True
-                        game_end = False
+                        game_quit = True
+                        game_over = False
                     if event.key == pygame.K_RETURN:
-                        gameLoop()
- 
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                game_over = True
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
-                    move_horizontal = -20
-                    move_vertical = 0
-                elif event.key == pygame.K_RIGHT:
-                    move_horizontal = 20
-                    move_vertical = 0
-                elif event.key == pygame.K_UP:
-                    move_vertical = -20
-                    move_horizontal = 0
-                elif event.key == pygame.K_DOWN:
-                    move_vertical = 20
-                    move_horizontal = 0
- 
-        if snake_x >= screen_width or snake_x < 0 or snake_y >= screen_height or snake_y < 0:
-            game_end = True
- 
-        snake_x += move_horizontal
-        snake_y += move_vertical
-        snake_score = 0
-        background(game_board)
-        font_score = pygame.font.SysFont("Courier", 16)
-        scoreboard = font_score.render("Score "+str(snake_score), 1, (white))
-        game_board.blit(scoreboard, (5, 10))
+                        game_quit = False
+                        game_over = False
+                        game_loop()
 
-        
-
-        pygame.draw.rect(game_board, apple_colour, [apple_x, apple_y, 20, 20])
-        pygame.draw.rect(game_board, white, [apple_x, apple_y, 20, 20],1)
-        
-        pygame.draw.rect(game_board, snake_colour, [snake_x, snake_y, 20, 20])
-        pygame.draw.rect(game_board, white, [snake_x, snake_y, 20, 20], 1)
-        pygame.display.update()
- 
-        if snake_x == apple_x and snake_y == apple_y:
-            print("Snake ate the apple")
-            snake_score += 1
-            apple_x = round(random.randrange(0, screen_width - snake_size) / grid_size) * grid_size
-            apple_y = round(random.randrange(0, screen_height - snake_size) / grid_size) * grid_size
-
-        clock.tick(snake_speed)
+            pygame.display.update()
  
     pygame.quit()
     quit()
  
  
-gameLoop()
+game_loop()
