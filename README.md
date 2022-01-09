@@ -168,6 +168,8 @@ REPLACE !!!!
 
 -   Blit - Show score on grid [Stack Overflow](https://stackoverflow.com/questions/19733226/python-pygame-how-to-make-my-score-text-update-itself-forever)
 
+-   Increasing snake length [CodeWithHarry](https://www.codewithharry.com/videos/python-game-development-17/)
+
 ### Content
 
 #### Import
