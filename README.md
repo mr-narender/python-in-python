@@ -36,13 +36,17 @@ Screenshot of game here.
 
 
 ## Features
-Below is a brief overview of the game.
+Below is a brief overview showing the main features of the game.
 
 ### Chequered background
 
 - placeholder
 
 ### Growing snake
+
+- placeholder
+
+### Increasing speed
 
 - placeholder
 
