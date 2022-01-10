@@ -2,7 +2,7 @@
 
 For the deployed website, [Click here.](https://liamsmith3194.github.io/python-in-python/)
 
-Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen collecting the "food" and not hitting the walls or crossing through yourself.
+Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen collecting the "food" and not hitting the walls or crossing through yourself. Everytime the food is collected the snake grows, along with your score.
 
 Screenshot of game here.
 
@@ -27,20 +27,18 @@ Screenshot of game here.
 - #### Typography
 - One typeface is used to show the scoreboard (Monotype). This is used as it brings an arcade like feel but is clear to read, especially when in white on the dark chequered background.
 
-
 ### Flowchart
 
 - Lucidchart - [View](https://lucid.app/lucidchart/73191bed-4f56-4346-a1b2-0c396684c9c4/edit?invitationId=inv_35d8ac34-a4b0-41c5-a4f5-98f8ded0b418)
 
 ![Lucid Snake Flowchart](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lucid-flowchart.PNG)
 
-
 ## Features
 Below is a brief overview showing the main features of the game.
 
 ### Chequered background
 
-- placeholder
+- The use of the dark chequered grid background makes the game more appealing than a boring black and white design. The snake and apple size matching the grid size (20px) shows a clear indication of where the snake and apple are and when to use the direction arrows on the keyboard.
 
 ### Growing snake
 
@@ -56,7 +54,7 @@ Below is a brief overview showing the main features of the game.
 
 ## Future Features
 
-- placeholder
+- Mirror walls.
 
 ## Technologies
 
@@ -113,19 +111,11 @@ Q4. As a first time visitor, I want to enjoy the game and come back again and ag
 
 ### Continued Testing
 
-- The Website was tested on Google Chrome, Internet Explorer (see glitches), Microsoft Edge and Safari browsers.
-- The website has been displayed on various devices such as Desktop PC, iMac, Laptop, iPhone X & iPad Pro
-- Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+- Friends and family members were asked to review the game and documentation to point out any bugs and/or user experience issues.
 
 ### Glitches
-#### Computers
 
-- Internet Explorer - The website doesn't display any images or button labels. This leads to no functionality.
-
-#### Mobile (iPhone X)
-- The hover pseudo has been removed on smaller devices (tablet-phone) to ensure the user the game has been reset, as the button were not returning to original style after selection.
-- The button images appear stretched. However, there were no issues via inspect mode in a browser.
-- The button labels don't line up centrally beneath the buttons. Again, there were no issues via inspect mode in a browser.
+-   End game message "\n" (new line) not working on display.
 
 ## Deployment
 
@@ -172,15 +162,13 @@ REPLACE !!!!
 
 ### Content
 
-#### Import
--   Pygame Module -  a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language. [pygame.org](https://www.pygame.org/wiki/about)
-
--   Sys Module -   ajjkhbl
-
--   Random Module - sdffds [w3schools](https://www.w3schools.com/python/module_random.asp)
-
-
 - All content was written by the developer.
+
+#### Import
+-   Pygame Module -  "a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language." [pygame.org](https://www.pygame.org/wiki/about)
+
+-   Random Module - "The random module is a built-in module to generate the pseudo-random variables. It can be used perform some action randomly such as to get a random number, selecting a random elements from a list, shuffle elements randomly, etc." [Tutorials Teacher](https://www.tutorialsteacher.com/python/random-module)
+
 
 ### Mentions
 

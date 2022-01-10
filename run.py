@@ -30,7 +30,7 @@ snake_colour = (0, 159, 0)
 snake_x = screen_width / 2
 snake_y = screen_height / 2
 snake_size = 20
-snake_score = 0
+current_score = 0
 snake_speed = 5
 
 # Apple
@@ -62,13 +62,15 @@ def background(game_board):
 
 def show_score():
     font_score = pygame.font.SysFont("Courier", 16)
-    scoreboard = font_score.render("Score: "+str(snake_score), True, (white))
+    scoreboard = font_score.render("Score: "+str(current_score), True, (white))
     game_board.blit(scoreboard, (5, 10))
- 
-# def snake(game_board):
-#         pygame.draw.rect(game_board, snake_colour, [200, 200, 20, 20])
-#         pygame.draw.rect(game_board, white, [200, 200, 20, 20], 1)
 
+# def high_score():
+#     high_score = current_score
+#     font_score = pygame.font.SysFont("Courier", 16)
+#     scoreboard = font_score.render("High Score: "+str(current_score), True, (white))
+#     game_board.blit(scoreboard, (245, 10))
+ 
 def snake(game_board):
     for x,y in snake_list:
         pygame.draw.rect(game_board, snake_colour, [x, y, 20, 20])
@@ -83,16 +85,16 @@ def apple(game_board):
         pygame.draw.rect(game_board, apple_colour, [apple_x, apple_y, 20, 20])
         pygame.draw.rect(game_board, white, [apple_x, apple_y, 20, 20],1)
 
-def apple_eaten(snake_x, apple_x, snake_y, apple_y, snake_score, snake_speed, snake_length):
+def apple_eaten(snake_x, apple_x, snake_y, apple_y, current_score, snake_speed, snake_length):
     if snake_x == apple_x and snake_y == apple_y:
-        snake_score += 10
+        current_score += 10
         snake_speed += 0.5
         snake_length += 1
         print("Snake ate the apple") 
         apple_x = round(random.randrange(0, screen_width - grid_size) / grid_size) * grid_size
         apple_y = round(random.randrange(0, screen_height - grid_size) / grid_size) * grid_size
     
-    return snake_x, apple_x, snake_y, apple_y, snake_score, snake_speed, snake_length
+    return snake_x, apple_x, snake_y, apple_y, current_score, snake_speed, snake_length
 
 def message(msg, color):
     """
@@ -126,7 +128,7 @@ def game_loop():
   """
     global game_over
     global game_quit
-    global snake_score
+    global current_score
     global snake_length
     global apple_x
     global apple_y
@@ -134,7 +136,7 @@ def game_loop():
  
     snake_x = screen_width / 2
     snake_y = screen_height / 2
-    snake_score = 0
+    current_score = 0
     snake_length = 1
     snake_speed = 5
     move_horizontal = 0
@@ -169,7 +171,7 @@ def game_loop():
         
         pygame.display.update()
  
-        snake_x, apple_x, snake_y, apple_y, snake_score, snake_speed, snake_length = apple_eaten(snake_x, apple_x, snake_y, apple_y, snake_score, snake_speed, snake_length)
+        snake_x, apple_x, snake_y, apple_y, current_score, snake_speed, snake_length = apple_eaten(snake_x, apple_x, snake_y, apple_y, current_score, snake_speed, snake_length)
         clock.tick(snake_speed)
 
         if snake_x >= screen_width or snake_x < 0 or snake_y >= screen_height or snake_y < 0:
