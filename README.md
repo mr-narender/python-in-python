@@ -24,8 +24,13 @@ Screenshot of game here.
 
 - #### Colour Scheme
 - The snake board is set on a dark chequered background #202937 - RGB (38,52,69) #263445 - RGB (32,41,55).
+- A bright green is used to show the snake - #009f00 - RGB (0, 159, 0)
+- A dark red is used to represent the apple - #c80000 - RGB (200, 0, 0)
+- White is used to show the live score.
+- Game over interface is a simple black screen and white text.
 - #### Typography
-- One typeface is used to show the scoreboard (Monotype). This is used as it brings an arcade like feel but is clear to read, especially when in white on the dark chequered background.
+- One typeface is used to show the scoreboard (Courier). This is used as it brings an arcade like feel but is clear to read, especially when in white on the dark chequered background.
+- The "play again" message shown when the game is over is displayed in Helvetica.
 
 ### Flowchart
 
@@ -42,15 +47,19 @@ Below is a brief overview showing the main features of the game.
 
 ### Growing snake
 
-- placeholder
+- This is a sterotypical feature of the game and Snake and works in the exact same way. As the snake collects and eats the apple the snake body increases by one square making each level more and more challenging in terms of avoid crashing into any part of the snake.
 
 ### Increasing speed
 
-- placeholder
+- The normal mobile features continue and not only does the snake increase in size but the speed of which the snake moves around the board increases too.
 
 ### Scoreboard
 
-- placeholder
+- When the snake has eaten the apple the score increases by 10 points.
+
+### Play again
+
+- Eventually when your turn is over, you have the option to play again or quit. If the user selects play again (Y) the score is reset to 0 and the snake size and speed is back to the default.
 
 ## Future Features
 
@@ -83,9 +92,7 @@ ALL TO BE REPLACED BELOW
 
 The W3C Markup Validator and W3C CSS Validator Services were used to ensure there were no syntax errors in the project.
 
-- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fliamsmith3194.github.io%2Fpython-in-python%2F)
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fliamsmith3194.github.io%2Fpython-in-python)
-- [Jshint JavaScript linter](https://jshint.com/) - 26 warnings, the mast majority:
+- [Python linter](https://jshint.com/) - 26 warnings, the mast majority:
     -   'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
     -   'template literal syntax' is only available in ES6 (use 'esversion: 6'.
 
@@ -95,19 +102,20 @@ The W3C Markup Validator and W3C CSS Validator Services were used to ensure ther
 
 Q1. As a first time visitor, I want a clear understand of the objective of game.
 
-- A large majority of the world's population have played or understand how Rock, Paper Scissors is played. As soon as users enter the site, it is abundantly clear what the game is and how to play it. The default icons on show increase the clarity.
+- Since Snake was created in the late 90's it has appeared on over 400 million mobile phones. There were no hesitation from the users playing this game.
 
 Q2. As a first time visitor, I want the controls to be as simple of possible.
 
-- The rules are very clear to see, labelled up beneath the interactive buttons. "ROCK BEATS SCISSORS" etc.
+- It doesn't get much easier than up, down, left and right.
 
 Q3. As a first time visitor, I want to have live scoring.
 
-- Round by round after the alert message of the outcome, the round number is updated along with the tally of rounds won, rounds drawn or rounds lost, all looking from the user's perspective.
+- The way the scoreboard is presented is easy to read even while concentrating on the game. The white makes it stands out from the grid and the Courier typeface give it a more "gamey" feel rather than uses something standard like Arial for example.
+- Keeping the score on the screen when the game is over is important as it's not alway possible to look at the score while playing the game especially as the speed increases.
 
 Q4. As a first time visitor, I want to enjoy the game and come back again and again.
 
-- The way the game is run is so easy to play and understand. I have found myself saying "one more round" constantly, just to finish with a win and beat the computer.
+- It's a classic game recreated and brought up to date. It was really addictive just like the mobile version was years ago.
 
 ### Continued Testing
 
@@ -121,7 +129,7 @@ Q4. As a first time visitor, I want to enjoy the game and come back again and ag
 
 ### Heroku
 
-GitHub was the program used to deploy the site, it was accomplished by using the following steps:
+Heroku was the program used to deploy the site, it was accomplished by using the following steps:
 
 REPLACE !!!!
 
