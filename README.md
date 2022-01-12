@@ -32,6 +32,8 @@ Screenshot of game here.
 - One typeface is used to show the scoreboard (Courier). This is used as it brings an arcade like feel but is clear to read, especially when in white on the dark chequered background.
 - The "play again" message shown when the game is over is displayed in Helvetica.
 
+![Design](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/start-game.PNG)
+
 ### Flowchart
 
 - Lucidchart - [View](https://lucid.app/lucidchart/73191bed-4f56-4346-a1b2-0c396684c9c4/edit?invitationId=inv_35d8ac34-a4b0-41c5-a4f5-98f8ded0b418)
@@ -61,9 +63,11 @@ Below is a brief overview showing the main features of the game.
 
 - Eventually when your turn is over, you have the option to play again or quit. If the user selects play again (Y) the score is reset to 0 and the snake size and speed is back to the default.
 
+![Features](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/snake-game.PNG)
+
 ## Future Features
 
-- Mirror walls.
+- "Mirror walls" - Instead of the game ended when you hit any of the four walls, the snake would appear from the opposite wall and back into the grid. This was a feature that was created for Snake II.
 
 ## Technologies
 
@@ -90,11 +94,13 @@ ALL TO BE REPLACED BELOW
 
 ### Validation Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to ensure there were no syntax errors in the project.
+The [PEP8](http://pep8online.com/) Python linter was used to ensure there were no syntax errors in the project.
+On the first use my code produced over 45 warnings and/or errors including:
+-   "blank line contains whitespace"
+-   "indentation is not a multiple of four"
+-   "line too long (93 > 79 characters)"
 
-- [Python linter](https://jshint.com/) - 26 warnings, the mast majority:
-    -   'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-    -   'template literal syntax' is only available in ES6 (use 'esversion: 6'.
+- [Final results](http://pep8online.com/)
 
 ### Testing User Stories from User Experience (UX) Section
 
