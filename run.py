@@ -184,7 +184,7 @@ def game_loop():
 
         while game_over == True:
             game_board.fill(black)
-            message("You Lost!\n Play Again?\n Yes (Y)/ No (N)", white)
+            message("Game Over!\n Play Again?\n Yes (Y)/ No (N)", white)
             show_score()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
