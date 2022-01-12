@@ -2,7 +2,7 @@
 
 For the deployed website, [Click here.](https://liamsmith3194.github.io/python-in-python/)
 
-Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen collecting the "food" and not hitting the walls or crossing through yourself.
+Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen collecting the "food" and not hitting the walls or crossing through yourself. Everytime the food is collected the snake grows, along with your score.
 
 Screenshot of game here.
 
@@ -24,9 +24,13 @@ Screenshot of game here.
 
 - #### Colour Scheme
 - The snake board is set on a dark chequered background #202937 - RGB (38,52,69) #263445 - RGB (32,41,55).
+- A bright green is used to show the snake - #009f00 - RGB (0, 159, 0)
+- A dark red is used to represent the apple - #c80000 - RGB (200, 0, 0)
+- White is used to show the live score.
+- Game over interface is a simple black screen and white text.
 - #### Typography
-- One typeface is used to show the scoreboard (Monotype). This is used as it brings an arcade like feel but is clear to read, especially when in white on the dark chequered background.
-
+- One typeface is used to show the scoreboard (Courier). This is used as it brings an arcade like feel but is clear to read, especially when in white on the dark chequered background.
+- The "play again" message shown when the game is over is displayed in Helvetica.
 
 ### Flowchart
 
@@ -34,25 +38,32 @@ Screenshot of game here.
 
 ![Lucid Snake Flowchart](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lucid-flowchart.PNG)
 
-
 ## Features
-Below is a brief overview of the game.
+Below is a brief overview showing the main features of the game.
 
 ### Chequered background
 
-- placeholder
+- The use of the dark chequered grid background makes the game more appealing than a boring black and white design. The snake and apple size matching the grid size (20px) shows a clear indication of where the snake and apple are and when to use the direction arrows on the keyboard.
 
 ### Growing snake
 
-- placeholder
+- This is a sterotypical feature of the game and Snake and works in the exact same way. As the snake collects and eats the apple the snake body increases by one square making each level more and more challenging in terms of avoid crashing into any part of the snake.
+
+### Increasing speed
+
+- The normal mobile features continue and not only does the snake increase in size but the speed of which the snake moves around the board increases too.
 
 ### Scoreboard
 
-- placeholder
+- When the snake has eaten the apple the score increases by 10 points.
+
+### Play again
+
+- Eventually when your turn is over, you have the option to play again or quit. If the user selects play again (Y) the score is reset to 0 and the snake size and speed is back to the default.
 
 ## Future Features
 
-- placeholder
+- Mirror walls.
 
 ## Technologies
 
@@ -81,9 +92,7 @@ ALL TO BE REPLACED BELOW
 
 The W3C Markup Validator and W3C CSS Validator Services were used to ensure there were no syntax errors in the project.
 
-- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fliamsmith3194.github.io%2Fpython-in-python%2F)
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fliamsmith3194.github.io%2Fpython-in-python)
-- [Jshint JavaScript linter](https://jshint.com/) - 26 warnings, the mast majority:
+- [Python linter](https://jshint.com/) - 26 warnings, the mast majority:
     -   'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
     -   'template literal syntax' is only available in ES6 (use 'esversion: 6'.
 
@@ -93,41 +102,34 @@ The W3C Markup Validator and W3C CSS Validator Services were used to ensure ther
 
 Q1. As a first time visitor, I want a clear understand of the objective of game.
 
-- A large majority of the world's population have played or understand how Rock, Paper Scissors is played. As soon as users enter the site, it is abundantly clear what the game is and how to play it. The default icons on show increase the clarity.
+- Since Snake was created in the late 90's it has appeared on over 400 million mobile phones. There were no hesitation from the users playing this game.
 
 Q2. As a first time visitor, I want the controls to be as simple of possible.
 
-- The rules are very clear to see, labelled up beneath the interactive buttons. "ROCK BEATS SCISSORS" etc.
+- It doesn't get much easier than up, down, left and right.
 
 Q3. As a first time visitor, I want to have live scoring.
 
-- Round by round after the alert message of the outcome, the round number is updated along with the tally of rounds won, rounds drawn or rounds lost, all looking from the user's perspective.
+- The way the scoreboard is presented is easy to read even while concentrating on the game. The white makes it stands out from the grid and the Courier typeface give it a more "gamey" feel rather than uses something standard like Arial for example.
+- Keeping the score on the screen when the game is over is important as it's not alway possible to look at the score while playing the game especially as the speed increases.
 
 Q4. As a first time visitor, I want to enjoy the game and come back again and again.
 
-- The way the game is run is so easy to play and understand. I have found myself saying "one more round" constantly, just to finish with a win and beat the computer.
+- It's a classic game recreated and brought up to date. It was really addictive just like the mobile version was years ago.
 
 ### Continued Testing
 
-- The Website was tested on Google Chrome, Internet Explorer (see glitches), Microsoft Edge and Safari browsers.
-- The website has been displayed on various devices such as Desktop PC, iMac, Laptop, iPhone X & iPad Pro
-- Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+- Friends and family members were asked to review the game and documentation to point out any bugs and/or user experience issues.
 
 ### Glitches
-#### Computers
 
-- Internet Explorer - The website doesn't display any images or button labels. This leads to no functionality.
-
-#### Mobile (iPhone X)
-- The hover pseudo has been removed on smaller devices (tablet-phone) to ensure the user the game has been reset, as the button were not returning to original style after selection.
-- The button images appear stretched. However, there were no issues via inspect mode in a browser.
-- The button labels don't line up centrally beneath the buttons. Again, there were no issues via inspect mode in a browser.
+-   End game message "\n" (new line) not working on display.
 
 ## Deployment
 
 ### Heroku
 
-GitHub was the program used to deploy the site, it was accomplished by using the following steps:
+Heroku was the program used to deploy the site, it was accomplished by using the following steps:
 
 REPLACE !!!!
 
@@ -164,17 +166,17 @@ REPLACE !!!!
 
 -   Blit - Show score on grid [Stack Overflow](https://stackoverflow.com/questions/19733226/python-pygame-how-to-make-my-score-text-update-itself-forever)
 
+-   Increasing snake length [CodeWithHarry](https://www.codewithharry.com/videos/python-game-development-17/)
+
 ### Content
 
-#### Import
--   Pygame Module -  a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language. [pygame.org](https://www.pygame.org/wiki/about)
-
--   Sys Module -   ajjkhbl
-
--   Random Module - sdffds [w3schools](https://www.w3schools.com/python/module_random.asp)
-
-
 - All content was written by the developer.
+
+#### Import
+-   Pygame Module -  "a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language." [pygame.org](https://www.pygame.org/wiki/about)
+
+-   Random Module - "The random module is a built-in module to generate the pseudo-random variables. It can be used perform some action randomly such as to get a random number, selecting a random elements from a list, shuffle elements randomly, etc." [Tutorials Teacher](https://www.tutorialsteacher.com/python/random-module)
+
 
 ### Mentions
 
