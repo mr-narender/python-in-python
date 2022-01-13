@@ -1,8 +1,8 @@
 # Python in Python
 
-For the deployed website, [Click here.](https://liamsmith3194.github.io/python-in-python/)
+For the deployed website, [click here.](https://liamsmith3194.github.io/python-in-python/)
 
-Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen collecting the "food" and not hitting the walls or crossing through yourself. Everytime the food is collected the snake grows, along with your score.
+Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen, collecting the "food" and not hitting the walls or crossing through yourself. Every time the food is collected, the snake grows, along with your score.
 
 Screenshot of game here.
 
@@ -10,8 +10,8 @@ Screenshot of game here.
 
 ### First Time Visitor Goals
 
-1. As a first time visitor, I want a clear understand of the objective of game.
-2. As a first time visitor, I want the controls to be as simple of possible.
+1. As a first time visitor, I want a clear understanding as to the objective of the game.
+2. As a first time visitor, I want the controls to be as simple as possible.
 3. As a first time visitor, I want to have live scoring.
 4. As a first time visitor, I want to enjoy the game and come back again and again.
 
@@ -49,7 +49,7 @@ Below is a brief overview showing the main features of the game.
 
 ### Growing snake
 
-- This is a sterotypical feature of the game and Snake and works in the exact same way. As the snake collects and eats the apple the snake body increases by one square making each level more and more challenging in terms of avoid crashing into any part of the snake.
+- This is a stereotypical feature of the game Snake and works in the exact same way. As the snake collects and eats the apple, the snake body increases by one square, making each level more and more challenging in terms of the player avoiding crashing into any part of the snake.
 
 ### Increasing speed
 
@@ -57,11 +57,11 @@ Below is a brief overview showing the main features of the game.
 
 ### Scoreboard
 
-- When the snake has eaten the apple the score increases by 10 points.
+- When the snake has eaten the apple, the score increases by 10 points.
 
 ### Play again
 
-- Eventually when your turn is over, you have the option to play again or quit. If the user selects play again (Y) the score is reset to 0 and the snake size and speed is back to the default.
+- Eventually, when your turn is over, you have the option to play again or quit. If the user selects play again (Y) the score is reset to 0 and the snake size and speed is back to the default.
 
 ![Features](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/snake-game.PNG)
 
@@ -96,32 +96,34 @@ ALL TO BE REPLACED BELOW
 
 The [PEP8](http://pep8online.com/) Python linter was used to ensure there were no syntax errors in the project.
 On the first use my code produced over 45 warnings and/or errors including:
--   "blank line contains whitespace"
--   "indentation is not a multiple of four"
--   "line too long (93 > 79 characters)"
+- "blank line contains whitespace"
+- "indentation is not a multiple of four"
+- "line too long (93 > 79 characters)"
 
+
+These have now all be rectified and the link to the results are below.
 - [Final results](http://pep8online.com/)
 
 ### Testing User Stories from User Experience (UX) Section
 
 - #### First Time Visitor Goals
 
-Q1. As a first time visitor, I want a clear understand of the objective of game.
+Q1. As a first time visitor, I want a clear understanding as to the objective of the game.
 
-- Since Snake was created in the late 90's it has appeared on over 400 million mobile phones. There were no hesitation from the users playing this game.
+- Since Snake was created in the late 90s, it has appeared on over 400 million mobile phones. There were no hesitation from the users playing this game.
 
-Q2. As a first time visitor, I want the controls to be as simple of possible.
+Q2. As a first time visitor, I want the controls to be as simple as possible.
 
 - It doesn't get much easier than up, down, left and right.
 
 Q3. As a first time visitor, I want to have live scoring.
 
-- The way the scoreboard is presented is easy to read even while concentrating on the game. The white makes it stands out from the grid and the Courier typeface give it a more "gamey" feel rather than uses something standard like Arial for example.
-- Keeping the score on the screen when the game is over is important as it's not alway possible to look at the score while playing the game especially as the speed increases.
+- The way the scoreboard is presented is easy to read even while concentrating on the game. The white makes it stands out from the grid and the Courier typeface give it a more game like feel rather than uses something standard like Arial for example.
+- Keeping the score on the screen when the game is over is important, as it's not always possible to look at the score while playing the game, especially as the speed increases.
 
 Q4. As a first time visitor, I want to enjoy the game and come back again and again.
 
-- It's a classic game recreated and brought up to date. It was really addictive just like the mobile version was years ago.
+- It's a classic game recreated and brought up to date. It was really addictive, just like the mobile version was years ago.
 
 ### Continued Testing
 
@@ -129,7 +131,7 @@ Q4. As a first time visitor, I want to enjoy the game and come back again and ag
 
 ### Glitches
 
--   End game message "\n" (new line) not working on display.
+- End game message "\n" (new line) not working on display.
 
 ## Deployment
 
@@ -164,24 +166,24 @@ REPLACE !!!!
 
 ### Code
 
--   Title in Pygame window. [Stack Overflow](https://stackoverflow.com/questions/40566585/how-to-change-the-name-of-a-pygame-window)
+- Title in Pygame window. [Stack Overflow](https://stackoverflow.com/questions/40566585/how-to-change-the-name-of-a-pygame-window)
 
--   Chessboard grid [Stack Overflow](https://stackoverflow.com/questions/38083788/turn-grid-into-a-checkerboard-pattern-in-python)
+- Chessboard grid [Stack Overflow](https://stackoverflow.com/questions/38083788/turn-grid-into-a-checkerboard-pattern-in-python)
 
--   Pygame.rect [pygame.org](https://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
+- Pygame.rect [pygame.org](https://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
 
--   Blit - Show score on grid [Stack Overflow](https://stackoverflow.com/questions/19733226/python-pygame-how-to-make-my-score-text-update-itself-forever)
+- Blit - Show score on grid [Stack Overflow](https://stackoverflow.com/questions/19733226/python-pygame-how-to-make-my-score-text-update-itself-forever)
 
--   Increasing snake length [CodeWithHarry](https://www.codewithharry.com/videos/python-game-development-17/)
+- Increasing snake length [CodeWithHarry](https://www.codewithharry.com/videos/python-game-development-17/)
 
 ### Content
 
 - All content was written by the developer.
 
 #### Import
--   Pygame Module -  "a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language." [pygame.org](https://www.pygame.org/wiki/about)
+- Pygame Module - "a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language." [pygame.org](https://www.pygame.org/wiki/about)
 
--   Random Module - "The random module is a built-in module to generate the pseudo-random variables. It can be used perform some action randomly such as to get a random number, selecting a random elements from a list, shuffle elements randomly, etc." [Tutorials Teacher](https://www.tutorialsteacher.com/python/random-module)
+- Random Module - "The random module is a built-in module to generate the pseudo-random variables. It can be used to perform some action randomly such as to get a random number, selecting a random element from a list, shuffle elements randomly, etc." [Tutorials Teacher](https://www.tutorialsteacher.com/python/random-module)
 
 
 ### Mentions
