@@ -7,7 +7,7 @@ screen_width = 400
 screen_height = 400
 # Game Window
 game_board = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption('Python in Python')
+pygame.display.set_caption("Python in Python")
 clock = pygame.time.Clock()
 # Colours
 white = (255, 255, 255)
@@ -111,7 +111,7 @@ def message(msg, color):
   Creates the message after the snake has crashed into the wall or into it's self.
   """
     mesg = game_quit_font.render(msg, True, white)
-    game_board.blit(mesg, [screen_width/5, screen_height/2])
+    game_board.blit(mesg, [screen_width/3.5, screen_height/2])
 
 
 def keyboard_commands(move_horizontal, move_vertical):
@@ -184,19 +184,14 @@ def game_loop():
 
         while game_over == True:
             game_board.fill(black)
-            message("Game Over!\n Play Again?\n Yes (Y)/ No (N)", white)
+            message("You Lost! Press Enter to play again", white)
             show_score()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_n:
-                        game_quit = True
-                        game_over = True
-                    if event.key == pygame.K_y:
-                        game_quit = False
-                        game_over = False
-                        game_loop()
+                  if event.key == pygame.K_RETURN:
+                    game_over = False
+                    game_loop()
 
             pygame.display.update()
-    pygame.quit()
-    quit()
+
 game_loop()
