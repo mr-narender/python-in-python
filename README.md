@@ -131,6 +131,7 @@ Q4. As a first time visitor, I want to enjoy the game and come back again and ag
 
 ### Glitches
 
+- Restart option would not work, but only when the snake had grown. If the snake hit the wall whilst at 1 square, the game restarted as planned.
 - End game message "\n" (new line) not working on display.
 
 ## Deployment
