@@ -1,5 +1,13 @@
 # Python in Python
 
+## Important information for assessment team
+When submitting to Heruko by following the steps below, after the receiving the message "Your app was successfully deployed". The "RUN PROGRAM" button returned this error message:
+"pygame.error: No available video device".
+
+This was the same error message that I received when first creating the game in GitPod.
+
+#
+
 For the deployed website, [click here.](https://liamsmith3194.github.io/python-in-python/)
 
 Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen, collecting the "food" and not hitting the walls or crossing through yourself. Every time the food is collected, the snake grows, along with your score.
@@ -43,6 +51,8 @@ Screenshot of game here.
 ## Features
 Below is a brief overview showing the main features of the game.
 
+![Features](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/snake-game.PNG)
+
 ### Chequered background
 
 - The use of the dark chequered grid background makes the game more appealing than a boring black and white design. The snake and apple size matching the grid size (20px) shows a clear indication of where the snake and apple are and when to use the direction arrows on the keyboard.
@@ -62,8 +72,6 @@ Below is a brief overview showing the main features of the game.
 ### Play again
 
 - Eventually, when your turn is over, you have the option to play again or quit. If the user selects play again (Y) the score is reset to 0 and the snake size and speed is back to the default.
-
-![Features](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/snake-game.PNG)
 
 ## Future Features
 
@@ -138,30 +146,35 @@ Q4. As a first time visitor, I want to enjoy the game and come back again and ag
 
 ### Heroku
 
-Heroku was the program used to deploy the site, it was accomplished by using the following steps:
+Heroku was the program used to share the game, it was accomplished by using the following steps:
 
-REPLACE !!!!
+1. Log in to Heroku. On your dashboard, click "New" and then click "Create new app".
 
-1. Log in to GitHub and select the GitHub Repository.
+2. Fill in the field for App name - It must be a unique name to Heroku. 
+    -   Then select the region of Europe and click "Create app"
 
-![GitHub Repository](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/github-repo.PNG)
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-new-app.PNG)
 
-2. At the top of the page towards the middle of the screen, you will see a "Settings" menu item with a cog icon.
+3. In the "Settings" tab, scroll down to "Buildpacks" and click "Add buildpack".
+    -   Select "python" and click "Save changes"
+    -   Select "node.js" and click "Save changes"
 
-![GitHub Settings](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/github-settings.PNG)
-3. On the left-hand side is a vertical list, locate and click "Pages".
+![Heroku - Add buildpack](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-add-buildpack.PNG)
 
-![GitHub Pages](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/github-pages.PNG)
+4. Scroll back and click the tab "Deploy"
+    - Choose "GitHub" as the Deployment method
+    - Enter the GitHub repository name and click "Search"
+    - The repository should appear below, then click "Connect"
 
-4. Under the "Source" sub-heading, click on the dropdown by default "None" and choose "main".
+![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-deployment-method.PNG)
 
-![GitHub Source](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/github-source.PNG)
+5. Then click the "Deploy Branch" button in the "Manual deploy"section. This way you can see the code being written.
 
-5. Click "Save"
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-manual-deploy.PNG)
 
-![GitHub Publish](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/github-published.PNG)
+6. Once that is complete, a message will appear with "Your app was successfully deployed" and a "View" button. This will take you to the app directly.
+
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-deployed-successfully.PNG)
 
 ## References
 
