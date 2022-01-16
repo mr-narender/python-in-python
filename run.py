@@ -16,7 +16,7 @@ dark_sq = (32, 41, 55)
 # Grid dimensions
 grid_width = 20
 grid_height = 20
-# Draw
+# Draw rectangle
 draw_rec = pygame.draw.rect
 # Snake
 snake_position = (0, 0)
