@@ -1,14 +1,19 @@
 # Python in Python
 
 ## Important information for assessment team
-When submitting to Heruko by following the steps below, after the receiving the message "Your app was successfully deployed". The "RUN PROGRAM" button returned this error message:
+When submitting to Heroku by following the steps [below](#deployment), after the receiving the message "Your app was successfully deployed". The "RUN PROGRAM" button returned this error message:
 "pygame.error: No available video device".
 
-This was the same error message that I received when first creating the game in GitPod.
+This was the same error message that I received when first creating the game in GitPod. Hence, my decision to use Replit, another program recommended by Code Institute. They advised me to create an account when signing up to the course.
+
+Below this section is a join link to the Replit file used to create and test the game. The GitHub repository containing the run.py file is an exact copy.
+
+Unfortunately, I was never told that Pygame was incompatible with Heroku until the 15th January 2022 via a tutor support call [view log](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/tutor-assistance-call).
+No concerns were ever mentioned in my mentor meetings throughout the project.
 
 #
 
-For the deployed website, [click here.](https://liamsmith3194.github.io/python-in-python/)
+For the Replit join link, [click here.](https://replit.com/join/rpbaqgcglq-liamsmith3194)
 
 Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen, collecting the "food" and not hitting the walls or crossing through yourself. Every time the food is collected, the snake grows, along with your score.
 
@@ -31,14 +36,14 @@ Screenshot of game here.
 ### Design
 
 - #### Colour Scheme
-- The snake board is set on a dark chequered background #202937 - RGB (38,52,69) #263445 - RGB (32,41,55).
-- A bright green is used to show the snake - #009f00 - RGB (0, 159, 0)
-- A dark red is used to represent the apple - #c80000 - RGB (200, 0, 0)
-- White is used to show the live score.
-- Game over interface is a simple black screen and white text.
+    - The snake board is set on a dark chequered background #202937 - RGB (38,52,69) #263445 - RGB (32,41,55).
+    - A bright green is used to show the snake - #009f00 - RGB (0, 159, 0)
+    - A dark red is used to represent the apple - #c80000 - RGB (200, 0, 0)
+    - White is used to show the live score.
+    - Game over interface is a simple black screen and white text.
 - #### Typography
-- One typeface is used to show the scoreboard (Courier). This is used as it brings an arcade like feel but is clear to read, especially when in white on the dark chequered background.
-- The "play again" message shown when the game is over is displayed in Helvetica.
+    - One typeface is used to show the scoreboard (Courier). This is used as it brings an arcade like feel but is clear to read, especially when in white on the dark chequered background.
+    - The "play again" message shown when the game is over is displayed in Helvetica.
 
 ![Design](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/start-game.PNG)
 
@@ -69,6 +74,18 @@ Below is a brief overview showing the main features of the game.
 
 - When the snake has eaten the apple, the score increases by 10 points.
 
+### Prints to the console
+
+- Whilst playing the game, multiple print statements are used, including:
+    - "Press any direction key to start the game." - This is displayed as the game loads and prompts the user to start using the correct keys.
+    - "Unrecognised command." - This is printed if anything but an arrow key is used during the game.
+    - "Well done! You ate the apple." - Prints every time the snake and apple position are an exact match.
+    - "Game over! You hit the wall." - If the snake exceeds the screen width or height, it's game over and this is printed in the console.
+    - "Game over! You hit yourself." - This is printed if the snake head is in contact with any part of the snake. This is also displayed if the snake reverses into its self (over 3 squares in length).
+    - "Final score: ..." - At game over, the final score is printed to the console using the f-string of snake_score.
+
+![Console prints](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/snake-game-console.PNG)
+
 ### Play again
 
 - Eventually, when your turn is over, you have the option to play again or quit. If the user selects play again (Y) the score is reset to 0 and the snake size and speed is back to the default.
@@ -91,12 +108,10 @@ Below is a brief overview showing the main features of the game.
 - GitPod was used via the terminal to push changes to GitHub.
 - [GitHub:](https://github.com/)
 - GitHub was used to embed the site and store all imagery.
+- [Heroku](https://www.Heroku.com/)
+- Heroku was used to share the app online.
 - [Lucidchart:](www.lucidchart.com)
 - Lucidchart was used to create the step by step workflow to visualise the game.
-
-_____________________
-ALL TO BE REPLACED BELOW
-
 
 ## Testing
 
@@ -109,8 +124,8 @@ On the first use my code produced over 45 warnings and/or errors including:
 - "line too long (93 > 79 characters)"
 
 
-These have now all be rectified and the link to the results are below.
-- [Final results](http://pep8online.com/)
+These have now all be rectified and the link to the results text document is below.
+- [Final results](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/pep8-results.txt)
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -139,7 +154,7 @@ Q4. As a first time visitor, I want to enjoy the game and come back again and ag
 
 ### Glitches
 
-- Restart option would not work, but only when the snake had grown. If the snake hit the wall whilst at 1 square, the game restarted as planned.
+- Gitpod and Heroku not displaying the game ("pygame.error: No available video device")
 - End game message "\n" (new line) not working on display.
 
 ## Deployment
@@ -153,28 +168,28 @@ Heroku was the program used to share the game, it was accomplished by using the 
 2. Fill in the field for App name - It must be a unique name to Heroku. 
     -   Then select the region of Europe and click "Create app"
 
-![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-new-app.PNG)
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/Heroku-new-app.PNG)
 
 3. In the "Settings" tab, scroll down to "Buildpacks" and click "Add buildpack".
     -   Select "python" and click "Save changes"
     -   Select "node.js" and click "Save changes"
 
-![Heroku - Add buildpack](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-add-buildpack.PNG)
+![Heroku - Add buildpack](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/Heroku-add-buildpack.PNG)
 
 4. Scroll back and click the tab "Deploy"
     - Choose "GitHub" as the Deployment method
     - Enter the GitHub repository name and click "Search"
     - The repository should appear below, then click "Connect"
 
-![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-deployment-method.PNG)
+![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/Heroku-deployment-method.PNG)
 
-5. Then click the "Deploy Branch" button in the "Manual deploy"section. This way you can see the code being written.
+5. Then click the "Deploy Branch" button in the "Manual deploy" section. This way you can see the code being written.
 
-![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-manual-deploy.PNG)
+![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/Heroku-manual-deploy.PNG)
 
 6. Once that is complete, a message will appear with "Your app was successfully deployed" and a "View" button. This will take you to the app directly.
 
-![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-deployed-successfully.PNG)
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/Heroku-deployed-successfully.PNG)
 
 ## References
 
@@ -205,40 +220,3 @@ Heroku was the program used to share the game, it was accomplished by using the 
 - My Mentor for answering my questions throughout.
 
 - Slack users for constructive feedback, suggestions for improvements and video calls.
-
-
-________________________________
-
-
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome liamsmith3194,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!

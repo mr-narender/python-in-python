@@ -1,0 +1,111 @@
+Sean profile	
+Sean
+Active
+4:24 pm in Ennis, Ireland
+Sean profile
+Sean
+Active
+Begin
+Tutoring at Code Institute profile
+Please confirm that you have prepared for this session as per the steps on this page: https://kevin-ci.github.io/tutoring-tips/#preparation 
+You should have:
+A problem statement, and a list of steps you've taken so far to resolve the issue.
+A learning outcome for this session.
+Failure to provide these may result in the session being terminated. Failure to answer all of the bots questions will result in this conversation being closed.
+By clicking "I'm Prepared," you agree to these conditions.
+I'm Prepared
+Tutoring at Code Institute profile
+Please provide us with your Problem Statement. This is a clear description of the problem that you're currently facing.
+For example, if you're working on a piece of code that isn't behaving as expected, what should the code be doing, and what is it actually doing?
+I have written my code in replit because of this error in gitpod but I was hoping Heruko would be ok.... it's not. It can't display my game
+Tutoring at Code Institute profile
+What steps have you taken so far to resolve the issue, or to address current gaps in your knowledge?
+googling see other posts but no real help
+Tutoring at Code Institute profile
+What is your Learning Outcome for this session? 
+What do you want to learn today? Ensuring that we have a clearly defined outcome to work towards throughout the session will mean that you come away with a reusable skill to apply to similar problems in the future.
+how to fix it
+Tutoring at Code Institute profile
+One final thing. Please share your code with us, if possible. 
+If you are working on Gitpod, please set your workspace to shared, and send us the link to it. If you are working on a course challenge, please send the name of the challenge. If you are seeing any errors, please send a screenshot.
+"pygame.error: No available video device"
+Your tutoring usage stats:
+Total sessions to date: 7
+Average number of sessions per student throughout the course: 50
+Time used in the past 7 days: 62 minute(s)
+Average time used by students per week: 45 minutes
+This usage time is counted in real-time and is only increased when a tutor is replying to your messages or looking at your code. Queue times and the time you spend composing messages are not counted.
+Tutoring at Code Institute profile
+Thanks for that. As you've used more than 60 minutes of tutoring this week, we'll aim to get back to you in less than 90 minutes.
+Sean profile
+Hi Liam,
+﻿PyGame is a desktop application, and as I understand it it requires so particular modules (software) to run in the browser, I am already aware that replit has something special going on with allows this, but heroku I know for a fact does not, many students that try to build GUI applications will not manage to get them working on heroku, the likely culprit in tkinter that cause the issue.
+right, so what do i do? The vast majority of my project is done
+Sean profile
+I would need to ask the assessments team about whether you could submit using replit, but I'm not 100% that is the case.
+﻿Sadly, before you started the project, because you were using a program designed for desktop and not the web, there was going to be a chance that it would not deploy and you could have checked before hand. 🙂
+﻿
+﻿Which project is this for? PP3?
+I checked with my mentor, he had no issues with it
+yes project 3
+pp3 is a console / terminal application, and a user interface is not needed, there is a template provided to help with deploying it as well.
+﻿
+﻿PyGame is not covered in the course, nor are desktop applications, and as much as I would like to help you. Tutor Support cannot give help / support with deployment of PyGame.
+﻿
+﻿I am yet to see a student that has used PyGame in a project and deployed successfully.
+Sean profile
+What i can do, is ask the assessment team about other deployment options, is another user able to access the replit version?
+the replit version is just open on my user. What i'm angry about is i wasn't told about pygame not working.
+I have until sunday to submit!
+I'm still working on it but
+https://replit.com/@LiamSmith3194/Python-in-Python#main.py
+Sean profile
+I cannot access that sadly.
+what about this
+https://replit.com/join/gyweyafvik-liamsmith3194
+that's a join link
+Sean profile
+Im not 100% on that, you said that you have until Sunday, do you mean tomorrow?
+Monday 12.00 deadline
+I work mon-fri
+so I have the rest of today and tomorrow
+Sean profile
+As its the weekend, i cant get in touch with anyone from that team, it would be first thing on Monday morning, the same goes for the Student Support team.
+﻿
+﻿Essentially the assessment team needs your application to be publically accessable.
+ok, but it's too late by then
+Sean profile
+I understand, but pygame does not run on heroku, so you will need to have it on some platform that is public.
+﻿The best that I can do, is refer you to Student Care and have them contact the assessment team with a solution unless you manage to get it working somehow.
+ok, well i add this "join" link in the readme file because i don't see how i will get this to work.
+Sean profile
+Do you have to be online for that link to work?
+what do you mean by online ?
+it's a link to the replit website
+I mean, logged in and that you are online at the same time that someone "joins"
+Sean profile
+You cant possibly know when the project will be accessed so it would need to be available without you being online and logged into replit
+
+thats what replit says
+shall i log out and see if you can view it?
+Sean profile
+sure..
+ok ive logged out
+Sean profile
+ok, yes, i can log in and see your game
+ok, well that's something i guess
+Sean profile
+That is something, what ill do is flag you for student care to ring first thing on Monday morning, and they will contact the assessment team, in the meantime, I would leave instructions in your readme of how to start and play the game from within replit, and also outline why you cannot use heroku.
+ok, thank you.
+Obviously make them aware that submission is 12.00, therefore I will submit either tonight or tomorrow regardless
+Sean profile
+Will do, thank you.
+thanks Sean
+Sean profile
+Ive sent off that request, someone should contact you first thing on monday.
+ok thank you
+Just now. Seen
+Sean profile
+Typing
+
+Write a reply…
