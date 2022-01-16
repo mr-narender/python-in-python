@@ -107,7 +107,7 @@ Below is a brief overview showing the main features of the game.
 - GitHub was used to embed the site and store all imagery.
 - [Heroku](https://www.Heroku.com/)
 - Heroku was used to share the app online.
-- [Lucidchart:](www.lucidchart.com)
+- [Lucidchart](https://lucidchart.com/)
 - Lucidchart was used to create the step by step workflow to visualise the game.
 
 ## Testing
