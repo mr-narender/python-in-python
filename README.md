@@ -8,16 +8,14 @@ This was the same error message that I received when first creating the game in 
 
 Below this section is a join link to the Replit file used to create and test the game. The GitHub repository containing the run.py file is an exact copy.
 
-Unfortunately, I was never told that Pygame was incompatible with Heroku until the 15th January 2022 via a tutor support call [view log](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/tutor-assistance-call).
+Unfortunately, I was never told that Pygame was incompatible with Heroku until the 15th January 2022 via a tutor support call [view log](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/tutor-assistance-call.txt).
 No concerns were ever mentioned in my mentor meetings throughout the project.
 
 #
 
-For the Replit join link, [click here.](https://replit.com/join/rpbaqgcglq-liamsmith3194)
+For the Replit join link, [click here.](https://replit.com/join/cbnyionike-liamsmith3194)
 
 Welcome to Python in Python. Based on the mobile game Snake. It was extremely popular when mobile phone had physical buttons rather than the modern touchscreens we see today. The aim of the game is to move the "snake" around the screen, collecting the "food" and not hitting the walls or crossing through yourself. Every time the food is collected, the snake grows, along with your score.
-
-Screenshot of game here.
 
 ## User Experience (UX)
 
@@ -31,7 +29,6 @@ Screenshot of game here.
 ### Returning Visitor Goals
 
 1. As a returning visitor, I want to enjoy the game as much as I did the first time.
-
 
 ### Design
 
@@ -123,7 +120,6 @@ On the first use my code produced over 45 warnings and/or errors including:
 - "indentation is not a multiple of four"
 - "line too long (93 > 79 characters)"
 
-
 These have now all be rectified and the link to the results text document is below.
 - [Final results](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/pep8-results.txt)
 
@@ -168,28 +164,28 @@ Heroku was the program used to share the game, it was accomplished by using the 
 2. Fill in the field for App name - It must be a unique name to Heroku. 
     -   Then select the region of Europe and click "Create app"
 
-![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/Heroku-new-app.PNG)
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-new-app.PNG)
 
 3. In the "Settings" tab, scroll down to "Buildpacks" and click "Add buildpack".
     -   Select "python" and click "Save changes"
     -   Select "node.js" and click "Save changes"
 
-![Heroku - Add buildpack](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/Heroku-add-buildpack.PNG)
+![Heroku - Add buildpack](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-add-buildpack.PNG)
 
 4. Scroll back and click the tab "Deploy"
     - Choose "GitHub" as the Deployment method
     - Enter the GitHub repository name and click "Search"
     - The repository should appear below, then click "Connect"
 
-![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/Heroku-deployment-method.PNG)
+![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-deployment-method.PNG)
 
 5. Then click the "Deploy Branch" button in the "Manual deploy" section. This way you can see the code being written.
 
-![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/Heroku-manual-deploy.PNG)
+![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-manual-deploy.PNG)
 
 6. Once that is complete, a message will appear with "Your app was successfully deployed" and a "View" button. This will take you to the app directly.
 
-![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/Heroku-deployed-successfully.PNG)
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-deployed-successfully.PNG)
 
 ## References
 
@@ -213,7 +209,6 @@ Heroku was the program used to share the game, it was accomplished by using the 
 - Pygame Module - "a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language." [pygame.org](https://www.pygame.org/wiki/about)
 
 - Random Module - "The random module is a built-in module to generate the pseudo-random variables. It can be used to perform some action randomly such as to get a random number, selecting a random element from a list, shuffle elements randomly, etc." [Tutorials Teacher](https://www.tutorialsteacher.com/python/random-module)
-
 
 ### Mentions
 
