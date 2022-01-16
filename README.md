@@ -184,7 +184,7 @@ Heroku was the program used to share the game, it was accomplished by using the 
 
 - Chessboard grid [Stack Overflow](https://stackoverflow.com/questions/38083788/turn-grid-into-a-checkerboard-pattern-in-python)
 
-- Pygame.rect [pygame.org](https://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
+- Pygame.rect - Draw rectangle [pygame.org](https://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
 
 - Blit - Show score on grid [Stack Overflow](https://stackoverflow.com/questions/19733226/python-pygame-how-to-make-my-score-text-update-itself-forever)
 
