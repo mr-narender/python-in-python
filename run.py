@@ -76,7 +76,6 @@ def level_up():
     global snake_score
     global snake_speed
     global snake_length
-
     snake_score += 10
     snake_speed += 0.5
     snake_length += 1
@@ -139,6 +138,8 @@ def keyboard_commands(move_x, move_y):
             elif event.key == pygame.K_DOWN:
                 move_y = 20
                 move_x = 0
+            else:
+                print("Unrecognised command")
     return move_x, move_y
 
 
@@ -189,6 +190,7 @@ def game_loop():
         if len(snake_list) > snake_length:
             del snake_list[0]
 
+        # Game over if the snake crashes into its own body
         for x in snake_list[:-1]:
             if x == snake_head:
                 game_over = True
@@ -201,9 +203,14 @@ def game_loop():
         snake_x, snake_y, snake_speed = apple_eaten(snake_x, snake_y)
         clock.tick(snake_speed)
 
-        if snake_x >= screen_x or snake_x < 0 or snake_y >= screen_y or snake_y < 0:
+        if snake_x >= screen_x or snake_x < 0:
             game_over = True
-            print(f"Game over! You hit the wall.")
+            print("Game over! You hit the wall.")
+            print(f"Final score: {snake_score}")
+
+        if snake_y >= screen_y or snake_y < 0:
+            game_over = True
+            print("Game over! You hit the wall.")
             print(f"Final score: {snake_score}")
 
         while game_over:
